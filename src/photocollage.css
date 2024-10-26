@@ -1,0 +1,33 @@
+.collage-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes de tailles égales */
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  
+  .collage-item {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour garantir que l'image garde son ratio tout en remplissant l'espace */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .collage-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur petit écran */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .collage-container {
+      grid-template-columns: 1fr; /* 1 colonne sur très petit écran */
+    }
+  }
+  
