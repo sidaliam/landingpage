@@ -21,11 +21,12 @@ const Header = () => {
             <a onClick={() => handleScroll("commander")}>طلب المنتوج</a>
           </li>
           <li>
-            <a onClick={() => handleScroll("about-us")}>تقديم المنتوج</a>
-          </li>
-          <li>
             <a onClick={() => handleScroll("utilisation")}>مكونات المنتوج</a>
           </li>
+          <li>
+            <a onClick={() => handleScroll("about-us")}>تقديم المنتوج</a>
+          </li>
+
         </ul>
       </nav>
     </header>
