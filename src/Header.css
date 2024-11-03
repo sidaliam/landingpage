@@ -1,44 +1,64 @@
 /* Style du header */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+  max-height: 50px;
+  border-radius: 50px;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-menu ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+/* Styles pour le menu hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+/* Styles responsive pour petits écrans */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
     background-color: #ffffff;
-    color: rgb(84, 155, 221);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
-  
-  .logo img {
-    max-height: 50px;
-    border-radius: 50px;
-  }
-  
-  .nav-menu ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-  }
-  
-  .nav-menu ul li a {
-    color: rgb(0,0,0);
-    text-decoration: none;
-    font-size: 1.3rem;
-    transition: color 0.3s ease;
-  }
-  
 
-  
-  /* Styles responsive pour petits écrans */
-  @media (max-width: 768px) {
-    .nav-menu ul {
-      flex-direction:row;
-      gap: 10px;
-    }
-  
-    .header {
-      flex-direction: column;
-      padding: 20px;
-    }
+  .nav-menu.open {
+    display: block;
   }
-  
+
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

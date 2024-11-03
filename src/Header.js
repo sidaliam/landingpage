@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import imglogo from "./images/logo.webp";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // Ferme le menu après le clic sur une section
     }
   };
 
@@ -15,7 +18,15 @@ const Header = () => {
       <div className="logo">
         <img src={imglogo} alt="Logo" />
       </div>
-      <nav className="nav-menu">
+
+      <button
+        className="hamburger"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        ☰
+      </button>
+
+      <nav className={`nav-menu ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
             <a onClick={() => handleScroll("commander")}>طلب المنتوج</a>
@@ -26,7 +37,6 @@ const Header = () => {
           <li>
             <a onClick={() => handleScroll("about-us")}>تقديم المنتوج</a>
           </li>
-
         </ul>
       </nav>
     </header>

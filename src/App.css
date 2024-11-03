@@ -1,5 +1,25 @@
+/* Animation type machine à écrire */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
+}
+
+.typing-effect {
+  overflow: hidden; /* Cache le texte au fur et à mesure qu'il apparaît */
+  border-right: 2px solid #000; /* Curseur clignotant */
+  white-space: nowrap; /* Garde le texte sur une ligne */
+  width: 0; /* Démarre avec une largeur de 0 */
+  animation: typewriter 4s steps(40, end) forwards, blinkCursor 0.75s step-end infinite;
+}
+
+
 .App {
   text-align: center;
+  background-color: #f9f9f9;
 }
 
 .App-logo {
@@ -7,6 +27,11 @@
   pointer-events: none;
 }
 
+.debut-atrox{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -23,12 +48,64 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.debut-atrox{
+  padding: 20px;
+}
 
 .App-link {
   color: #61dafb;
 }
+
+.about-us{
+  font-family: Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  
+  margin: 20px auto;
+  max-width: 700px;
+}
 .composition-produit{
-  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.composition-produit h3 {
+  font-weight: bold;
+  color: #222;
+}
+
+.utilisation {
+  font-family: Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.utilisation h3 {
+  font-weight: bold;
+  color: #222;
+}
+
+.utilisation strong {
+  color: #D23F57; /* Accent color for emphasis */
 }
 @keyframes App-logo-spin {
   from {

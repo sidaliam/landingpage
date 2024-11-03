@@ -16,23 +16,37 @@ function App() {
 
   return (
     <div className="App">
+      <div
+        className="debut-atrox"
+        style={{ background: "black", color: "white" }}
+      >
+        {" "}
+        Bienvenue Chez Atrox Men's HairCare{" "}
+      </div>
       <Header />
       <br />
-      <h1 id="about-us">ATROX </h1>
+      <h1 id="about-us" className="typing-effect">
+        ATROX
+      </h1>
       <br />
       <br />
-      <h2 id="about-us"> QUALITE PRIX RESULTAT</h2>
-      <h2 id="about-us"> الجودة السعر هايل وتشوف نتائج بعينك</h2>
+      <h2
+        id="about-us"
+        className="typing-effect"
+        style={{ animationDelay: "1s" }}
+      >
+        QUALITÉ, PRIX, RÉSULTAT
+      </h2>
+      <h2 id="about-us">الجودة السعر هايل وتشوف نتائج بعينك</h2>
 
-      {/* Section 'about-us' */}
-      <h3 className="about-us">
-        {" "}
+      <h3 className="about-us" style={{ animationDelay: "3s" }}>
         ، شعرك المجعد يولي مستقيم وسهل التسريح نتائج سريعة وواضحة: من أول
         استعمال ، راح تشوف الفرق في شعرك. الشعر اللي كان مجعد ويطلع في كل اتجاه،
         راح يولي ناعم ومستقيم ترطيب عميق : كابيار يغذي شعرك. بعمق ويحافظ على
         رطوبته، مما يجعله صحي وقوي سهولة الاستعمال: التطبيق سهل وبسيط، وما يحت
-        اجش لوقت كبير{" "}
+        اجش لوقت كبير
       </h3>
+
       <br />
       <br />
       <Hero images={images} />
@@ -51,7 +65,7 @@ function App() {
       <Photocollage />
 
       {/* Section 'utilisation' */}
-      <h3 id="utilisation">
+      <h3 className="utilisation" id="utilisation">
         Composition : Notre produit est composé des meilleures huiles végétales
         naturelles et d'une crème magique fabriquée dans les meilleurs
         laboratoires. Celle-ci renforce les follicules pileux et agit pour
@@ -63,7 +77,6 @@ function App() {
         les cheveux crépus et profitez d'une chevelure lisse et parfaite à la
         texture douce.
       </h3>
-
 
       <Photocollage2 />
 

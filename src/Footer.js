@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import logo from "./images/logo.webp";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone"
 const Footer = () => {
   return (
     <footer className="footer">
@@ -35,6 +36,7 @@ const Footer = () => {
             />
           </a>
         </div>
+        <LocalPhoneIcon/>
         <p> 0689993060</p>
       </div>
     </footer>

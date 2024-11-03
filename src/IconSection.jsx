@@ -16,7 +16,7 @@ const IconSection = () => {
   const theme = useTheme();
   return (
     <Container
-      sx={{ mt: 3, bgcolor: theme.palette.mode === "dark" ? "#000" : "#fff" }}
+      sx={{ mt: 3, bgcolor: "#f9f9f9" }}
     >
       <Stack
         divider={
