@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
 import imglogo from "./images/logo.webp";
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,7 +25,12 @@ const Header = () => {
         ☰
       </button>
 
+      
+
       <nav className={`nav-menu ${isOpen ? "open" : ""}`}>
+        <button className="close-button" onClick={() => setIsOpen(false)}>
+          &times;
+        </button>
         <ul>
           <li>
             <a onClick={() => handleScroll("commander")}>طلب المنتوج</a>
