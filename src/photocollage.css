@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 colonnes de tailles égales */
     grid-gap: 10px;
-    padding: 10px;
   }
   
   .collage-item {

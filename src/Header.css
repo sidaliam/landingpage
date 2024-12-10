@@ -7,11 +7,16 @@
   background-color: #ffffff;
   color: rgb(84, 155, 221);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .logo img {
   max-height: 50px;
   border-radius: 50px;
+}
+
+.shopicon {
+  color: black;
 }
 
 .nav-menu ul {
@@ -51,27 +56,41 @@
 }
 
 /* Styles responsive pour petits écrans */
+/* Styles responsive pour petits écrans */
 @media (max-width: 768px) {
   .nav-menu {
-    display: none;
-    position: absolute;
-    top: 70px;
+    display: block;
+    position: fixed;
+    top: 0;
     right: 0;
-    width: 100%;
+    width: 90%;
+    height: 90%;
     background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%); /* Menu caché */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+
   }
 
   .nav-menu.open {
-    display: block;
-    transform: translateX(0);
+    transform: translateX(0); /* Menu visible */
   }
 
   .nav-menu ul {
     flex-direction: column;
-    padding: 10px;
+    padding: 85px;
+    gap: 10px;
+    font-size: 50px;
+  }
+
+  .nav-menu ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Ligne de séparation */
+    padding: 10px 0; /* Espacement vertical */
+  }
+  
+  .nav-menu ul li:last-child {
+    border-bottom: none; /* Supprime la bordure pour le dernier élément */
   }
 
   .hamburger {
@@ -80,5 +99,7 @@
 
   .close-button {
     display: block;
+    color: red;
   }
 }
+

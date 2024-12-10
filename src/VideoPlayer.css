@@ -1,0 +1,24 @@
+/* Style du conteneur vidéo */
+.video-container {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+  }
+  
+  /* Style de la vidéo */
+  .custom-video {
+    width: 100%;
+    height: auto;
+    outline: none;
+  }
+  
+  /* Boutons de contrôle (si ajoutés plus tard) */
+  .custom-video::-webkit-media-controls {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  

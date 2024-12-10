@@ -1,8 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Header.css";
 import imglogo from "./images/logo.webp";
+import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
+
+  // Fermer le menu lorsqu'un clic est détecté en dehors
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   const handleScroll = (id) => {
     const section = document.getElementById(id);
@@ -18,16 +34,11 @@ const Header = () => {
         <img src={imglogo} alt="Logo" />
       </div>
 
-      <button
-        className="hamburger"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         ☰
       </button>
 
-      
-
-      <nav className={`nav-menu ${isOpen ? "open" : ""}`}>
+      <nav ref={navRef} className={`nav-menu ${isOpen ? "open" : ""}`}>
         <button className="close-button" onClick={() => setIsOpen(false)}>
           &times;
         </button>
@@ -35,6 +46,7 @@ const Header = () => {
           <li>
             <a onClick={() => handleScroll("commander")}>طلب المنتوج</a>
           </li>
+       
           <li>
             <a onClick={() => handleScroll("utilisation")}>مكونات المنتوج</a>
           </li>
@@ -43,6 +55,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <ShoppingCartRoundedIcon className="shopicon" />
     </header>
   );
 };

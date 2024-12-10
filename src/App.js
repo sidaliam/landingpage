@@ -1,16 +1,17 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import WilayaCommuneSelector from "./WilayaCommuneSelector";
-import Caroussel from "./Caroussel.js";
-import img1 from "./images/IMG-20241020-WA0027.jpg";
-import img2 from "./images/IMG-20241020-WA0028.jpg";
-import img3 from "./images/IMG-20241020-WA0029.jpg";
+import img1 from "./images/atrox1.jpeg";
+import img2 from "./images/atrox2.jpeg";
+import img3 from "./images/atrox3.jpeg";
 import Header from "./Header.js";
 import Photocollage from "./Photocollage.js";
 import Footer from "./Footer.js";
 import Hero from "./Hero.jsx";
-import imgprod from "./images/imgproduct.webp";
 import Photocollage2 from "./Photocollage2.js";
+
+import "./VideoPlayer.css";
+import VideoPlayer from "./VideoPlayer.js";
 function App() {
   const images = [img1, img2, img3];
 
@@ -23,23 +24,35 @@ function App() {
         {" "}
         Bienvenue Chez Atrox Men's HairCare{" "}
       </div>
+
       <Header />
       <br />
-      <h1 id="about-us" className="typing-effect">
+      <br />
+      <br />
+      <br />
+      <h1 id="about-us" className="fade-in-effect">
         ATROX
       </h1>
       <br />
       <br />
       <h2
         id="about-us"
-        className="typing-effect"
+        className="fade-in-effect"
         style={{ animationDelay: "1s" }}
       >
         QUALITÉ, PRIX, RÉSULTAT
       </h2>
-      <h2 id="about-us">الجودة السعر هايل وتشوف نتائج بعينك</h2>
+      <h2 id="about-us" className="fade-in-effect">الجودة السعر هايل وتشوف نتائج بعينك</h2>
 
-      <h3 className="about-us" style={{ animationDelay: "3s" }}>
+
+      {/* Section 'commander' */}
+      <div id="commander">
+        <WilayaCommuneSelector className="command-product" />
+      </div>
+
+      <VideoPlayer/>
+
+      <h3 className="fade-in-effect" style={{ animationDelay: "1.5s" }}>
         ، شعرك المجعد يولي مستقيم وسهل التسريح نتائج سريعة وواضحة: من أول
         استعمال ، راح تشوف الفرق في شعرك. الشعر اللي كان مجعد ويطلع في كل اتجاه،
         راح يولي ناعم ومستقيم ترطيب عميق : كابيار يغذي شعرك. بعمق ويحافظ على
@@ -80,13 +93,9 @@ function App() {
 
       <Photocollage2 />
 
-      <br />
-      <br />
 
-      {/* Section 'commander' */}
-      <div id="commander">
-        <WilayaCommuneSelector className="command-product" />
-      </div>
+
+      
       <br />
       <br />
 
